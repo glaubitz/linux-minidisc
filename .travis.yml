@@ -29,6 +29,27 @@ matrix:
       language: cpp
       compiler: clang
       env: BUILD_TYPE=osx-native-clang
+# adding code to run on power systems
+    - os: linux
+      dist: trusty
+      arch: ppc64le
+      sudo: required
+      language: cpp
+      compiler: clang
+      env: BUILD_TYPE=linux-native-clang
+    - os: linux
+      dist: trusty
+      arch: ppc64le
+      sudo: required
+      language: cpp
+      compiler: gcc
+      env: BUILD_TYPE=linux-native-gcc
+
+    - os: osx
+      osx_image: xcode7.2
+      language: cpp
+      compiler: clang
+      env: BUILD_TYPE=osx-native-clang      
 
 deploy:
   provider: releases
