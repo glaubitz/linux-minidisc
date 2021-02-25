@@ -3,8 +3,16 @@ Fedora-specific Build/Setup Instructions
 
 Install build-dependencies:
 
+Prior to Fedora 33
+
     sudo dnf install \
         qt5-devel libgcrypt-devel libmad-devel \
+        libid3tag-devel glib-devel taglib-devel
+
+Fedora 33+
+
+    sudo dnf install \
+        qt5-qtbase-devel libgcrypt-devel libmad-devel \
         libid3tag-devel glib-devel taglib-devel
 
 Symlink translation tools:
