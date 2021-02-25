@@ -6,3 +6,4 @@ Info.plist
 Makefile*
 *.user
 qtc-gdbmacros
+.qmake.stash
